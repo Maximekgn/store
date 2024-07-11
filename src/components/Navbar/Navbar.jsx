@@ -2,6 +2,7 @@ import React from 'react'
 import { FaCartShopping } from 'react-icons/fa6'
 import { IoMdSearch } from 'react-icons/io'
 import { RiMoonClearFill } from 'react-icons/ri'
+import { RxAvatar } from 'react-icons/rx'
 const menuLinks = [
     {
         id: 1,
@@ -27,18 +28,18 @@ const menuLinks = [
 ]
 const Navbar = () => {
   return (
-    <nav className='py-4 bg-white '>
+    <nav className='py-4 bg-white mb-5 w-full fixed '>
         <div className="px-14 flex justify-between">
-            <div className='flex gap-5 items-center'>   {/*logo and links*/}
-                <a href="#" className='text-blue-500 font-semibold tracking-widest text-xl uppercase sm:text-2xl'>KGN-Store</a> {/* Logo */}
+            <div className='flex gap-7 items-center'>   {/*logo and links*/}
+                <a href="#" className='text-red-500 font-semibold tracking-widest text-xl uppercase sm:text-2xl'>KGN-Store</a> {/* Logo */}
                 <div className='hidden sm:block '>  {/*links*/}
-                    <ul className='flex items-center gap-3'> 
+                    <ul className='flex items-center gap-5'> 
                         {
                             menuLinks.map((data , index) => (
                                 <li key={index}>
                                     <a 
                                     href={data.path} key={data.id}
-                                    className='text-gray-500 font-semibold  hover:text-blue-500 hover:underline '
+                                    className='text-gray-500 font-bold text-lg  hover:text-red-500 hover:underline '
                                     >{data.name}
                                     </a>
                                 </li>
@@ -51,8 +52,8 @@ const Navbar = () => {
 
             <div className='flex justify-between items-center gap-4'>  {/*search bar AND BUTTONS */}
                 <div className='relative group hidden sm:block' > {/*search bar*/}
-                    <input type="text" placeholder='Rechercher'
-                    className='w-0 group-hover:w-full transition-all duration-500 rounded-full group-hover:border group-hover:border-gray-800 py-1 focus:outline-none focus:border-1'/>
+                    <input type="text" placeholder='Search'
+                    className='w-0 group-hover:w-full transition-all duration-500 rounded-full group-hover:border group-hover:border-gray-800 py-1 focus:outline-none focus:border-1 px-2'/>
                     <IoMdSearch className='text-2xl text-gray-600 hover:cursor-pointer absolute top-1/2 right-3 translate-y-[-50%] '/>
                 </div>
 
@@ -63,6 +64,13 @@ const Navbar = () => {
                     </button>
                     <button onClick={()=>console.log("change theme")}>
                         <RiMoonClearFill className='text-2xl'/>
+                    </button>
+                    <button className='group'>
+                        <RxAvatar className='text-2xl'/>
+                        <div className='bg-gray-300 hidden group-hover:block absolute right-5 p-3'>
+                            <p>Username</p>
+                            <p>Logout</p>
+                        </div>
                     </button>
                 </div>
             </div>

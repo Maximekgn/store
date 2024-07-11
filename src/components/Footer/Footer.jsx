@@ -32,7 +32,7 @@ const Footer = () => {
     <div className='py-4 bg-white '>
         <div className="px-14 flex justify-between">
             <div className='flex gap-5 items-center'>   {/*logo and links*/}
-                <a href="#" className='text-blue-500 italic tracking-widest text-xl uppercase sm:text-2xl'>KGN-Store</a> {/* Logo */}
+                <a href="#" className='text-red-500 italic tracking-widest text-xl uppercase sm:text-2xl'>KGN-Store</a> {/* Logo */}
                 <div className='hidden sm:block '>  {/*links*/}
                     <ul className='flex items-center gap-3'> 
                         {
@@ -40,7 +40,7 @@ const Footer = () => {
                                 <li key={index}>
                                     <a 
                                     href={data.path} key={data.id}
-                                    className='text-gray-500 font-semibold  hover:text-blue-500 hover:underline '
+                                    className='text-gray-500 font-semibold  hover:text-red-500 hover:underline '
                                     >{data.name}
                                     </a>
                                 </li>
