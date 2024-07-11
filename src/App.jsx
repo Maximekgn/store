@@ -1,10 +1,14 @@
-import React from 'react'
-import Form from './pages/Form'
+import React from 'react';
+import './App.css';
+
+import Store from './pages/Store';
 
 const App = () => {
   return (
-    <Form />
-  )
-}
+    <>
+      <Store />
+    </>
+  );
+};
 
-export default App
+export default App;
