@@ -1,13 +1,15 @@
 import React from 'react';
 import './App.css';
-
-import Store from './pages/Home';
+import Navbar from './components/Navbar/Navbar';
+import Home from './pages/Home';
 
 const App = () => {
   return (
-    <>
-      <Store />
-    </>
+    <div className='mx-10'>
+
+      <Navbar/>
+      <Home/>
+    </div>
   );
 };
 
