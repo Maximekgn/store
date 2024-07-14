@@ -17,7 +17,7 @@ Hero = () => {
 
   return (
 
-    <div className='flex justify-around h-[50dvh] w-full  mt-5 '>
+    <div className='flex justify-around h-[50dvh] w-full  mt-5'>
         <div> {/*image*/}
             <img src={product.image} alt={product.title} className='w-full h-full object-cover' />
         </div>

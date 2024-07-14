@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Hero from '../components/Hero/Hero';
 import Card from '../components/Card.jsx/Card';
-import Footer from '../components/Footer/Footer';
 
 const Home = () => {
     const [categories, setCategories] = useState([]);
@@ -50,8 +49,9 @@ const Home = () => {
 
     return (
         <>
+            <div className='mx-10 '>
             <Hero/>
-            <div className='flex gap-10 p-5 mt-5'>
+            <div className='flex gap-10 p-5 mt-5 font-sansS '>
                 <div className='w-1/3 gap-5 text-center font-bold flex items-center justify-center'>
                     <img src="/images/jewelery.jpg" className='rounded-xl shadow-xl h-full w-4/6' />
                     <h1 className='text-xl underline'>Jewelery</h1>
@@ -65,7 +65,7 @@ const Home = () => {
                     <h1 className='text-xl underline'>Women Clothes</h1>
                 </div>
             </div>
-            <div className='px-5'> 
+            <div className='px-5 font-sansS'> 
                 {categories.map((category) => (
                     <div key={category} className='my-10'>
                         <h1 className='text-2xl font-bold mb-4 underline'>{category} </h1>
@@ -79,7 +79,7 @@ const Home = () => {
                     </div>
                 ))}
             </div>
-            <Footer/>
+            </div>
         </>
     );
 };

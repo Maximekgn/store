@@ -2,14 +2,15 @@ import React from 'react';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Home from './pages/Home';
+import Footer from './components/Footer/Footer';
 
 const App = () => {
   return (
-    <div className='mx-10'>
-
-      <Navbar/>
+    <>
+      <Navbar numOfItems={5}/>
       <Home/>
-    </div>
+      <Footer/>
+    </>
   );
 };
 
