@@ -66,11 +66,11 @@ const Home = () => {
             </div>
             <div className='px-5'> 
                 {categories.map((category) => (
-                    <div key={category}>
-                        <h1 className='text-2xl font-bold mb-4 underline'>{category} -></h1>
+                    <div key={category} className='my-10'>
+                        <h1 className='text-2xl font-bold mb-4 underline'>{category} </h1>
                         <div className='overflow-x-auto overflow-y-hidden flex scrollbar-hide'>
-                            <div className='flex flex-nowrap gap-5'>
-                                {productsByCategory[category].map((product) => (
+                            <div className='flex flex-nowrap gap-8'>
+                                {productsByCategory[category]?.map((product) => (
                                     <Card key={product.id} product={product} />
                                 ))}
                             </div>

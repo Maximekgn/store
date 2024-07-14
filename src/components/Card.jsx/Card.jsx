@@ -14,8 +14,8 @@ const Card = ({ product }) => {
           </a>
         </div>
         <div className='flex items-center mt-4'>
-          <p className='text-2xl font-semibold text-gray-900'>${product.price}</p>
-          <button className='ml-auto bg-white text-gray-700 font-semibold py-2 px-4 border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
+          <p className='text-xl font-semibold text-gray-900'>{product.price * 650}FCFA</p>
+          <button className='ml-auto bg-black text-white font-semibold py-2 px-4 border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 hover:text-black'>
             Add to cart
           </button>
         </div>

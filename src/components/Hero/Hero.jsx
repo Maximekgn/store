@@ -5,7 +5,7 @@ Hero = () => {
 
     const [product , setproduct] = useState([])
     const getARandomProduct = async () => {
-        const randomNumber = Math.floor(Math.random() * 16)
+        const randomNumber = Math.floor(Math.random() * 17)
         fetch('https://fakestoreapi.com/products/'+randomNumber)
             .then(res=>res.json())
             .then(json=>setproduct(json))  
