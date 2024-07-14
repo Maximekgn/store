@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Hero from '../components/Hero/Hero';
 import Card from '../components/Card.jsx/Card';
+import Footer from '../components/Footer/Footer';
 
 const Home = () => {
     const [categories, setCategories] = useState([]);
@@ -78,6 +79,7 @@ const Home = () => {
                     </div>
                 ))}
             </div>
+            <Footer/>
         </>
     );
 };
