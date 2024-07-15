@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Card = ({ product , addItems}) => {
+const Card = ({ product, addItems }) => {
   return (
     <div className='flex flex-col rounded-lg shadow-lg overflow-hidden'>
       <div className='flex-shrink-0'>
@@ -14,8 +14,11 @@ const Card = ({ product , addItems}) => {
           </a>
         </div>
         <div className='flex items-center mt-4'>
-          <p className='text-xl font-semibold text-gray-900'>{product.price * 650}FCFA</p>
-          <button className='ml-auto bg-black text-white font-semibold py-2 px-4 border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 hover:text-black' onClick={() => addItems(product)} >
+          <p className='text-xl font-semibold text-gray-900'>{(product.price * 650).toLocaleString()} FCFA</p>
+          <button 
+            className='ml-auto bg-black text-white font-semibold py-2 px-4 border border-gray-300 rounded-lg shadow-sm hover:bg-gray-100 hover:text-black' 
+            onClick={() => addItems(product)}
+          >
             Add to cart
           </button>
         </div>
