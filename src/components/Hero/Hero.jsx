@@ -1,7 +1,6 @@
 import React, { useEffect , useState } from 'react'
 
-const 
-Hero = () => {
+const Hero = ({addItems} ) => {
 
     const [product , setproduct] = useState([])
     const getARandomProduct = async () => {
@@ -26,7 +25,7 @@ Hero = () => {
             <h1 className='text-2xl font-extrabold'>{product.title}</h1>
             <h1 className='text-lg font-semibold'>{product.price * 650} FCFA</h1>
             <div className='flex gap-5 mt-8'>
-                <button className='p-5 rounded-xl shadow hover:shadow-2xl'>Add to cart </button> <button className='p-5 shadow hover:shadow-2xl rounded-xl text-white bg-black'>Buy now</button>
+                <button className='p-5 rounded-xl shadow hover:shadow-2xl' onClick={() => addItems(product)} >Add to cart </button> <button className='p-5 shadow hover:shadow-2xl rounded-xl text-white bg-black'>Buy now</button>
             </div>
         </div>
     </div>

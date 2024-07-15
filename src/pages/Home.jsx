@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Hero from '../components/Hero/Hero';
 import Card from '../components/Card.jsx/Card';
 
-const Home = () => {
+const Home = ({ addItems }) => {
     const [categories, setCategories] = useState([]);
     const [productsByCategory, setProductsByCategory] = useState({});
   
@@ -50,7 +50,7 @@ const Home = () => {
     return (
         <>
             <div className='mx-10 '>
-            <Hero/>
+            <Hero addItems={addItems} />
             <div className='flex gap-10 p-5 mt-5 font-sansS '>
                 <div className='w-1/3 gap-5 text-center font-bold flex items-center justify-center'>
                     <img src="/images/jewelery.jpg" className='rounded-xl shadow-xl h-full w-4/6' />
@@ -72,7 +72,7 @@ const Home = () => {
                         <div className='overflow-x-auto overflow-y-hidden flex scrollbar-hide'>
                             <div className='flex flex-nowrap gap-8'>
                                 {productsByCategory[category]?.map((product) => (
-                                    <Card key={product.id} product={product} />
+                                    <Card key={product.id} product={product} addItems={addItems} />
                                 ))}
                             </div>
                         </div>
