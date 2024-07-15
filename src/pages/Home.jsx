@@ -51,30 +51,30 @@ const Home = ({ addItems }) => {
     <>
       <div className='mx-10'>
         <Hero addItems={addItems} />
-        <div className='flex gap-10 p-5 mt-10 font-sans'>
-          <div className='w-1/3 gap-5 text-center font-bold flex items-center justify-center'>
-            <img src="/images/jewelery.jpg" alt="Jewelery" className='rounded-xl shadow-xl h-full w-4/6' />
-            <h1 className='text-xl underline'>Jewelery</h1>
-          </div>
-          <div className='w-1/3 gap-5 text-center font-bold flex items-center justify-center'>
-            <img src="/images/electro.jpg" alt="Electronics" className='rounded-xl h-full w-4/6 shadow-xl'/>
-            <h1 className='text-xl underline'>Electronics</h1>
-          </div>
-          <div className='w-1/3 gap-5 text-center font-bold flex items-center justify-center'>
-            <img src="/images/women.jpg" alt="Women Clothes" className='rounded-xl h-full w-4/6 shadow-xl'/>
-            <h1 className='text-xl underline'>Women's Clothing</h1>
+        <div className='flex flex-col gap-10 p-5 mt-5 font-sans'>
+          <div className='flex flex-col md:flex-row gap-5 text-center font-bold items-center justify-center'>
+            <div className='flex-1'>
+              <img src="/images/jewelery.jpg" alt="Jewelery" className='rounded-xl shadow-xl w-full' />
+              <h1 className='text-xl underline'>Jewelery</h1>
+            </div>
+            <div className='flex-1'>
+              <img src="/images/electro.jpg" alt="Electronics" className='rounded-xl shadow-xl w-full'/>
+              <h1 className='text-xl underline'>Electronics</h1>
+            </div>
+            <div className='flex-1'>
+              <img src="/images/women.jpg" alt="Women Clothes" className='rounded-xl shadow-xl w-full'/>
+              <h1 className='text-xl underline'>Women's Clothing</h1>
+            </div>
           </div>
         </div>
         <div className='px-5 font-sans'>
           {categories.map((category) => (
             <div key={category} className='my-10'>
               <h1 className='text-2xl font-bold mb-4 underline'>{category}</h1>
-              <div className='overflow-x-auto overflow-y-hidden flex scrollbar-hide'>
-                <div className='flex flex-nowrap gap-8'>
-                  {productsByCategory[category]?.map((product) => (
-                    <Card key={product.id} product={product} addItems={addItems} />
-                  ))}
-                </div>
+              <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
+                {productsByCategory[category]?.map((product) => (
+                  <Card key={product.id} product={product} addItems={addItems} />
+                ))}
               </div>
             </div>
           ))}
