@@ -20,7 +20,7 @@ const Hero = ({ addItems }) => {
   }, []);
 
   return (
-    <div className='flex flex-col md:flex-row items-center justify-center h-[75dvh] w-full bg-white text-black mt-20'>
+    <div className='flex flex-col md:flex-row items-center justify-center h-[75dvh] w-full bg-white text-black mt-40'>
       <div className='w-full md:w-1/2 h-1/2 md:h-full flex justify-center items-center p-8'> {/* image */}
         {product.image && (
           <img 
